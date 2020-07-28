@@ -1,0 +1,606 @@
+
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Quiz app</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel="stylesheet" type="text/css" media='screen' href="src/messages.css" />
+    </head>
+    <body>
+
+
+        <nav class="head_nav">
+            <ul>
+                <a href="">HOME</a>
+                <a href="">Login</a>
+                <a href="">Register</a>
+            </ul>
+        </nav>
+
+        <section>
+
+            <div id="mousePositionBody" class="hide"></div>
+            <div id="showProfilePicture" class="hide">
+                <div class="material-icons flexCenter close">close</div>
+                <img src="" alt="pix" />
+            </div>
+            <div id="deleteMessageOption" class="hide">
+                <span>
+                    <div><span class="D">Delete Message?</span></div>
+                    <div><span class="action DFM">DELETE FOR ME</span></div>
+                    <div class="hide"><span class="action DFE">DELETE FOR EVERYONE</span></div>
+                    <div><span class="action C">CANCLE</span></div>
+                </span>
+            </div>
+
+            <div id="side">
+                <div id="sideHead">
+                    <div id="sideHeadNormal">
+                        <div id="sideSideMinimize" class="material-icons flexCenter">clear</div>
+                        <div id="sideHeadPix">
+                            <img src="default.jpg" alt="pix" />
+                        </div>
+                        <div id="sideSubContain">
+                            <div id="sideHeadChat" class="material-icons flexCenter">chat</div>
+                            <div id="sideHeadSearchChat" class="material-icons flexCenter">search</div>
+                            <div id="sideHeadOthers" class="material-icons flexCenter">more_vert</div>
+                            <div id="sideHeadOthersOptions" class="hide">
+                                <p class="sideHeadOptionSelect">Select</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="sideHeadSelected">
+                        <div id="sideHeadBack" class="material-icons flexCenter">arrow_back</div>
+                        <div id="sideHeadCount" class="flexCenter">0</div>
+                        <div id="sideHeadPin" class="flexCenter"><svg viewBox="0 0 19 19" width="19" height="19"><path fill="currentColor" d="M9.5 18.419C4.574 18.419.581 14.426.581 9.5S4.574.581 9.5.581s8.919 3.993 8.919 8.919-3.993 8.919-8.919 8.919zm2.121-5.708l-.082-2.99 1.647-1.963a1.583 1.583 0 0 0-.188-2.232l-.32-.269a1.58 1.58 0 0 0-2.231.203L8.803 7.42l-2.964.439a.282.282 0 0 0-.14.496l5.458 4.58c.186.157.47.019.464-.224zM5.62 13.994a.504.504 0 0 0 .688-.038l2.204-2.307-1.085-.91-1.889 2.571a.504.504 0 0 0 .082.684z"></path></svg></div>
+                        <div id="sideHeadDelete" class="material-icons flexCenter">delete</div>
+                        <div id="sideHeadOthersS" class="material-icons flexCenter">more_vert</div>
+                    </div>
+                </div>
+                <div id="chatSearch">
+                    <div>
+                        <span id="chatSearchBack" class="material-icons flexCenter arrow_back">search</span>
+                        <div>
+                            <div class="chatSearchInput placeholder">Serach for chats</div>
+                            <div class="chatSearchInput" contentEditable="true"></div>
+                        </div>
+                        <span id="chatSearchClear" class="material-icons flexCenter hide">close</span>
+                    </div>
+                </div>
+                <div id="sideBody">
+                    <div class="chatContain hover" id="sd-1" data-id="sd-1">
+                        <div class="chatSelected" name="sd-1" data-id="sd-1"></div><!-- chatSelected -->
+                        <div class="chatPix">
+                            <img src="default.jpg" alt="pix" />
+                            <span class="material-icons flexCenter chatSelect">done<span>
+                        </div>
+                        <div class="chatSubContain">
+                            <div class="nameContain">
+                                <div class="nameSubContain">Jane Deo Jane Deo Jane Deo Jane Deo</div>
+                                <div class="chatTimeContain">11:15am</div>
+                            </div>
+                            <div class="lMegContain">
+                                <div class="lMegContain1">
+                                <div class="material-icons flexCenter lMegRead read">done</div>
+                                    <div class="lMeg">
+                                        So, msrrry, fjjfk nkhfefevr rt4rvtrtvr ervt 
+                                    </div>
+                                </div>
+                                <div class="lMegContain2">
+                                    <div class="material-icons flexCenter chatPined"><svg viewBox="0 0 19 19" width="19" height="19"><path fill="currentColor" d="M9.5 18.419C4.574 18.419.581 14.426.581 9.5S4.574.581 9.5.581s8.919 3.993 8.919 8.919-3.993 8.919-8.919 8.919zm2.121-5.708l-.082-2.99 1.647-1.963a1.583 1.583 0 0 0-.188-2.232l-.32-.269a1.58 1.58 0 0 0-2.231.203L8.803 7.42l-2.964.439a.282.282 0 0 0-.14.496l5.458 4.58c.186.157.47.019.464-.224zM5.62 13.994a.504.504 0 0 0 .688-.038l2.204-2.307-1.085-.91-1.889 2.571a.504.504 0 0 0 .082.684z"></path></svg></div>
+                                    <div class="flexCenter chatCount">99</div>
+                                    <div class="material-icons flexCenter chatExpandMore"  name="sd-1" data-id="sd-1">expand_more</div>
+                                    <div class="hide" name="sd-1" data-id="sd-1">
+                                        <p class="selectThisChat">Select</p>
+                                        <p class="deleteThisChat">Delete</p>
+                                        <p class="pinThisChat">Pin</p>
+                                    </div><!-- chatMoreOptions -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chatContain hover" id="sd-2" data-id="sd-2">
+                        <div class="chatSelected" name="sd-2" data-id="sd-2"></div><!-- chatSelected -->
+                        <div class="chatPix">
+                            <img src="default.jpg" alt="pix" />
+                            <span class="material-icons flexCenter chatSelect">done<span>
+                        </div>
+                        <div class="chatSubContain">
+                            <div class="nameContain">
+                                <div class="nameSubContain">Jane Deo Jane Deo Jane Deo Jane De</div>
+                                <div class="chatTimeContain">11:15am</div>
+                            </div>
+                            <div class="lMegContain">
+                                <div class="lMegContain1">
+                                    <div class="material-icons flexCenter lMegRead">done</div>
+                                    <div class="lMeg">
+                                        So, msrrry, fjjfk nkhfefevr rt4rvtrtvr ervt 
+                                    </div>
+                                </div>
+                                <div class="lMegContain2">
+                                    <div class="material-icons flexCenter chatPined"><svg viewBox="0 0 19 19" width="19" height="19"><path fill="currentColor" d="M9.5 18.419C4.574 18.419.581 14.426.581 9.5S4.574.581 9.5.581s8.919 3.993 8.919 8.919-3.993 8.919-8.919 8.919zm2.121-5.708l-.082-2.99 1.647-1.963a1.583 1.583 0 0 0-.188-2.232l-.32-.269a1.58 1.58 0 0 0-2.231.203L8.803 7.42l-2.964.439a.282.282 0 0 0-.14.496l5.458 4.58c.186.157.47.019.464-.224zM5.62 13.994a.504.504 0 0 0 .688-.038l2.204-2.307-1.085-.91-1.889 2.571a.504.504 0 0 0 .082.684z"></path></svg></div>
+                                    <div class="flexCenter chatCount">99</div>
+                                    <div class="material-icons flexCenter chatExpandMore"  name="sd-2" data-id="sd-2">expand_more</div>
+                                    <div class="hide" name="sd-2" data-id="sd-2">
+                                        <p class="selectThisChat">Select</p>
+                                        <p class="deleteThisChat">Delete</p>
+                                        <p class="pinThisChat">Pin</p>
+                                    </div><!-- chatMoreOptions -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chatContain hover" id="sd-3" data-id="sd-3">
+                        <div class="chatSelected" name="sd-3" data-id="sd-3"></div><!-- chatSelected -->
+                        <div class="chatPix">
+                            <img src="default.jpg" alt="pix" />
+                            <span class="material-icons flexCenter chatSelect">done<span>
+                        </div>
+                        <div class="chatSubContain">
+                            <div class="nameContain">
+                                <div class="nameSubContain">Jane Deo</div>
+                                <div class="chatTimeContain">11:15am</div>
+                            </div>
+                            <div class="lMegContain">
+                                <div class="lMegContain1">
+                                    <div class="material-icons flexCenter lMegRead">done</div>
+                                    <div class="lMeg">
+                                        So, msrrry, fjjfk nkhfefevr rt4rvtrtvr ervt 
+                                    </div>
+                                </div>
+                                <div class="lMegContain2">
+                                    <div class="material-icons flexCenter chatPined"><svg viewBox="0 0 19 19" width="19" height="19"><path fill="currentColor" d="M9.5 18.419C4.574 18.419.581 14.426.581 9.5S4.574.581 9.5.581s8.919 3.993 8.919 8.919-3.993 8.919-8.919 8.919zm2.121-5.708l-.082-2.99 1.647-1.963a1.583 1.583 0 0 0-.188-2.232l-.32-.269a1.58 1.58 0 0 0-2.231.203L8.803 7.42l-2.964.439a.282.282 0 0 0-.14.496l5.458 4.58c.186.157.47.019.464-.224zM5.62 13.994a.504.504 0 0 0 .688-.038l2.204-2.307-1.085-.91-1.889 2.571a.504.504 0 0 0 .082.684z"></path></svg></div>
+                                    <div class="flexCenter chatCount">99</div>
+                                    <div class="material-icons flexCenter chatExpandMore"  name="sd-3" data-id="sd-3">expand_more</div>
+                                    <div class="hide" name="sd-3" data-id="sd-3">
+                                        <p class="selectThisChat">Select</p>
+                                        <p class="deleteThisChat">Delete</p>
+                                        <p class="deleteThisChat">Delete</p>
+                                        <p class="deleteThisChat">Delete</p>
+                                        <p class="deleteThisChat">Delete</p>
+                                        <p class="pinThisChat">Pin</p>
+                                    </div><!-- chatMoreOptions -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chatContain hover" id="sd-4" data-id="sd-4">
+                        <div class="chatSelected" name="sd-4" data-id="sd-4"></div><!-- chatSelected -->
+                        <div class="chatPix">
+                            <img src="default.jpg" alt="pix" />
+                            <span class="material-icons flexCenter chatSelect">done<span>
+                        </div>
+                        <div class="chatSubContain">
+                            <div class="nameContain">
+                                <div class="nameSubContain">Jane Deo</div>
+                                <div class="chatTimeContain">11:15am</div>
+                            </div>
+                            <div class="lMegContain">
+                                <div class="lMegContain1">
+                                    <div class="material-icons flexCenter lMegRead">done</div>
+                                    <div class="lMeg">
+                                        So, msrrry, fjjfk nkhfefevr rt4rvtrtvr ervt 
+                                    </div>
+                                </div>
+                                <div class="lMegContain2">
+                                    <div class="material-icons flexCenter chatPined"><svg viewBox="0 0 19 19" width="19" height="19"><path fill="currentColor" d="M9.5 18.419C4.574 18.419.581 14.426.581 9.5S4.574.581 9.5.581s8.919 3.993 8.919 8.919-3.993 8.919-8.919 8.919zm2.121-5.708l-.082-2.99 1.647-1.963a1.583 1.583 0 0 0-.188-2.232l-.32-.269a1.58 1.58 0 0 0-2.231.203L8.803 7.42l-2.964.439a.282.282 0 0 0-.14.496l5.458 4.58c.186.157.47.019.464-.224zM5.62 13.994a.504.504 0 0 0 .688-.038l2.204-2.307-1.085-.91-1.889 2.571a.504.504 0 0 0 .082.684z"></path></svg></div>
+                                    <div class="flexCenter chatCount">99</div>
+                                    <div class="material-icons flexCenter chatExpandMore"  name="sd-4" data-id="sd-4">expand_more</div>
+                                    <div class="hide" name="sd-4" data-id="sd-4">
+                                        <p class="selectThisChat">Select</p>
+                                        <p class="deleteThisChat">Delete</p>
+                                        <p class="pinThisChat">Pin</p>
+                                    </div><!-- chatMoreOptions -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chatContain hover" id="sd-5" data-id="sd-5">
+                        <div class="chatSelected" name="sd-5" data-id="sd-5"></div><!-- chatSelected -->
+                        <div class="chatPix">
+                            <img src="default.jpg" alt="pix" />
+                            <span class="material-icons flexCenter chatSelect">done<span>
+                        </div>
+                        <div class="chatSubContain">
+                            <div class="nameContain">
+                                <div class="nameSubContain">Jane Deo</div>
+                                <div class="chatTimeContain">11:15am</div>
+                            </div>
+                            <div class="lMegContain">
+                                <div class="lMegContain1">
+                                    <div class="material-icons flexCenter lMegRead">done</div>
+                                    <div class="lMeg">
+                                        So, msrrry, fjjfk nkhfefevr rt4rvtrtvr ervt 
+                                    </div>
+                                </div>
+                                <div class="lMegContain2">
+                                    <div class="material-icons flexCenter chatPined"><svg viewBox="0 0 19 19" width="19" height="19"><path fill="currentColor" d="M9.5 18.419C4.574 18.419.581 14.426.581 9.5S4.574.581 9.5.581s8.919 3.993 8.919 8.919-3.993 8.919-8.919 8.919zm2.121-5.708l-.082-2.99 1.647-1.963a1.583 1.583 0 0 0-.188-2.232l-.32-.269a1.58 1.58 0 0 0-2.231.203L8.803 7.42l-2.964.439a.282.282 0 0 0-.14.496l5.458 4.58c.186.157.47.019.464-.224zM5.62 13.994a.504.504 0 0 0 .688-.038l2.204-2.307-1.085-.91-1.889 2.571a.504.504 0 0 0 .082.684z"></path></svg></div>
+                                    <div class="flexCenter chatCount">99</div>
+                                    <div class="material-icons flexCenter chatExpandMore"  name="sd-5" data-id="sd-5">expand_more</div>
+                                    <div class="hide" name="sd-5" data-id="sd-5">
+                                        <p class="selectThisChat">Select</p>
+                                        <p class="deleteThisChat">Delete</p>
+                                        <p class="pinThisChat">Pin</p>
+                                    </div><!-- chatMoreOptions -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chatContain hover" id="sd-6" data-id="sd-6">
+                        <div class="chatSelected" name="sd-6" data-id="sd-6"></div><!-- chatSelected -->
+                        <div class="chatPix">
+                            <img src="default.jpg" alt="pix" />
+                            <span class="material-icons flexCenter chatSelect">done<span>
+                        </div>
+                        <div class="chatSubContain">
+                            <div class="nameContain">
+                                <div class="nameSubContain">Jane Deo</div>
+                                <div class="chatTimeContain">11:15am</div>
+                            </div>
+                            <div class="lMegContain">
+                                <div class="lMegContain1">
+                                    <div class="material-icons flexCenter lMegRead">done</div>
+                                    <div class="lMeg">
+                                        So, msrrry, fjjfk nkhfefevr rt4rvtrtvr ervt 
+                                    </div>
+                                </div>
+                                <div class="lMegContain2">
+                                    <div class="material-icons flexCenter chatPined"><svg viewBox="0 0 19 19" width="19" height="19"><path fill="currentColor" d="M9.5 18.419C4.574 18.419.581 14.426.581 9.5S4.574.581 9.5.581s8.919 3.993 8.919 8.919-3.993 8.919-8.919 8.919zm2.121-5.708l-.082-2.99 1.647-1.963a1.583 1.583 0 0 0-.188-2.232l-.32-.269a1.58 1.58 0 0 0-2.231.203L8.803 7.42l-2.964.439a.282.282 0 0 0-.14.496l5.458 4.58c.186.157.47.019.464-.224zM5.62 13.994a.504.504 0 0 0 .688-.038l2.204-2.307-1.085-.91-1.889 2.571a.504.504 0 0 0 .082.684z"></path></svg></div>
+                                    <div class="flexCenter chatCount">99</div>
+                                    <div class="material-icons flexCenter chatExpandMore"  name="sd-6" data-id="sd-6">expand_more</div>
+                                    <div class="hide" name="sd-6" data-id="sd-6">
+                                        <p class="selectThisChat">Select</p>
+                                        <p class="deleteThisChat">Delete</p>
+                                        <p class="pinThisChat">Pin</p>
+                                    </div><!-- chatMoreOptions -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="message">
+                <div id="msgDate">11:30</div>
+
+                <div id="showChatBox" class="material-icons flexCenter">near_me</div>
+                <div id="messageHead">
+                    <div id="messageHeadNormal">
+                        <div id="messageSideMaximize" class="material-icons flexCenter">menu</div>
+                        <div id="messageHeadPix">
+                            <img src="default.jpg" alt="pix" />
+                        </div>
+                        <div id="messageHeadNameContain">
+                            <div id="messageHeadName">
+                                John Deo Jane Deo Jane Deo Jane Deo Jane De Jane Deo Jane Deo Jane Deo Jane De
+                            </div>
+                            <div id="messageHeadNameTime">
+                                11:00am
+                            </div>
+                        </div>
+                        <div id="messageHeadOthers" class="material-icons flexCenter">more_vert</div>
+                        <div id="messageHeadOthersOptions" class="hide">
+                            <p class="messageHeadOptionSelect">Select</p>
+                        </div>
+                    </div>
+                    <div id="messageHeadSelected">
+                        <div id="messageHeadBack" class="material-icons flexCenter">arrow_back</div>
+                        <div id="messageHeadCount" class="flexCenter">0</div>
+                        <div id="messageHeadReply" class="material-icons flexCenter">reply</div>
+                        <div id="messageHeadDelete" class="material-icons flexCenter">delete</div>
+                        <div id="messageHeadFoward" class="material-icons flexCenter">reply</div>
+                        <div id="messageHeadCopy" class="material-icons flexCenter">content_copy</div>
+                        <div id="messageHeadStar" class="material-icons flexCenter">grade</div>
+                        <div id="messageHeadInfo" class="material-icons flexCenter">description</div>
+                        <div id="messageHeadOthersS" class="material-icons flexCenter">more_vert</div>
+                    </div>
+                </div>
+                <div id="messageBody">
+                    <div class="msgDate">11:31</div>
+
+                    <div class="msgWrapper sent first" id="1" data-id="1">
+                        <div class="selected hover" name="1" data-id="1"></div><!-- selected s -->
+                        <div class="Megchecked" name="1" data-id="1">
+                            <input type="checkbox"/>
+                        </div><!-- Megchecked -->
+                        <div class="messageContainer sent first" name="1" data-id="1">
+                            <div class="material-icons megMore" name="1" data-id="1">expand_more</div><!-- material-icons megMore -->
+                            <div class="hide" name="1" data-id="1">
+                                <p class="replyThisMessage">Reply</p>
+                                <p class="thisMessageInfo">Info</p>
+                                <p class="fowardThisMessage">Foward</p>
+                                <p class="starThisMessage">Star</p>
+                                <p class="deleteThisMessage">Delete</p>
+                                <p class="selectThisMessage">Select</p>
+                            </div><!-- megMoreOptions -->
+                            <div class="replyedMeg" name="1" data-id="1">
+                                <div></div><!-- transparent background -->
+                                <span class="you">
+                                </span>
+                                <a href="#1">
+                                    <span class="you">You</span>
+                                    ggg
+                                    ggg
+                                    ggg
+                                    ggg
+                                </a>
+                            </div><!-- replyedMeg -->
+                            <p class="message">
+                                Hello. How are you today?
+                                gewagerw wgw WGWQg ewge qwgeq wgeqw egqweg wgwg
+                                grgwwrg wgwqew gwq geweg wqegw gewagerw wgw WGWQg ewge qwgeq wgeqw egqweg wgwg
+                                    grgwwrg wgwqew gwq geweg wqegw egwegw gewqgewagerw wgw WGWQg ewge qwgeq wgeqw egqweg wgwg
+                                    grgwwrg wgwqew gwq geweg wqegw egwegw gewqgewagerw wgw WGWQg ewge qwgeq wgeqw egqweg wgwg
+                                    grgwwrg wgwqew gwq geweg wqegw egwegw gewqgewagerw wgw WGWQg ewge qwgeq wgeqw egqweg wgwg
+                                    grgwwrg wgwqew gwq geweg wqegw egwegw gewqegwegw gewqe gwqegw qwgeq
+                                wqgew olsjls sfml gjfu gwq geweg wqegw egwegw
+                            </p>
+                            <span class="timeContainPlaceholder timeContain">
+                                <span class="material-icons stared">grade</span>
+                                <span class="time">11:00</span>
+                                <span class="material-icons seen">done</span>
+                            </span>
+                            <span class="timeContain">
+                                <span class="material-icons stared">grade</span>
+                                <span class="time">11:00</span>
+                                <span class="material-icons seen">done</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="msgWrapper sent" id="1a" data-id="1a">
+                        <div class="selected hover" name="1a" data-id="1a"></div><!-- selected s -->
+                        <div class="Megchecked" name="1a" data-id="1a"><input type="checkbox"/></div><!-- Megchecked -->
+                        <div class="messageContainer sent" name="1a" data-id="1a">
+                            <div class="material-icons megMore" name="1a" data-id="1a">expand_more</div><!-- material-icons megMore -->
+                            <div class="hide" name="1a" data-id="1a">
+                                <p class="replyThisMessage">Reply</p>
+                                <p class="thisMessageInfo">Info</p>
+                                <p class="fowardThisMessage">Foward</p>
+                                <p class="starThisMessage">Star</p>
+                                <p class="deleteThisMessage">Delete</p>
+                                <p class="selectThisMessage">Select</p>
+                            </div><!-- megMoreOptions -->
+                            <div class="replyedMeg" name="1a" data-id="1a">
+                                <div></div><!-- transparent background -->
+                                <span class="you">
+                                </span>
+                                <a href="#1">
+                                    <span class="you">You</span>
+                                    Hello. How are you today?
+                                    gewagerw wgw WGWQg ewge qwgeq wgeqw egqweg wgwg
+                                    grgwwrg wgwqew gwq geweg wqegw egwegw gewqe gwqe h gw qwgeq
+                                    wqgew
+                                </a>
+                            </div><!-- replyedMeg -->
+                            <p class="message">
+                                Hello. How are you today?
+                                gewagerw wgw WGWQgewagerw wgw WGWQg ewge qwgeq wgeqw egqweg wgwg
+                                    grgwwrg wgwqew gwq geweg wqegw egwegw gewqgewagerw wgw WGWQg ewge qwgeq wgeqw egqweg wgwg
+                                    grgwwrg wgwqew gwq geweg wqegw egwegw gewqgewagerw wgw WGWQg ewge qwgeq wgeqw egqweg wgwg
+                                    grgwwrg wgwqew gwq geweg wqegw egwegw gewqgewagerw wgw WGWQg ewge qwgeq wgeqw egqweg wgwg
+                                    grgwwrg wgwqew gwq geweg wqegw egwegw gewqgewagerw wgw WGWQg ewge qwgeq wgeqw egqweg wgwg
+                                    grgwwrg wgwqew gwq geweg wqegw egwegw gewqgewagerw wgw WGWQg ewge qwgeq wgeqw egqweg wgwg
+                                    grgwwrg wgwqew gwq geweg wqegw egwegw gewqgewagerw wgw WGWQg ewge qwgeq wgeqw egqweg wgwg
+                                    grgwwrg wgwqew gwq geweg wqegw egwegw gewqg ewge qwgeq wgeqw egqweg wgwg
+                                grgwwrg wgwqew gwq geweg wqegw egwegw gewqe gwqegw qwgeq
+                                wqgew olsjls sfml gjfu gwq geweg wqegw egwegw gewqe gwqegw qw yyv geq fgjjjjj fg
+                            </p>
+                            <span class="timeContainPlaceholder timeContain">
+                                <span class="material-icons stared">grade</span>
+                                <span class="time">11:00</span>
+                                <span class="material-icons seen">done</span>
+                            </span>
+                            <span class="timeContain">
+                                <span class="material-icons stared">grade</span>
+                                <span class="time">11:00</span>
+                                <span class="material-icons seen">done</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="msgDate">11:32</div>
+
+                    <div class="msgWrapper recieved first" id="2" data-id="2">
+                        <div class="selected hover"  name="2" data-id="2"></div><!-- selected s -->
+                        <div class="Megchecked"  name="2" data-id="2"><input type="checkbox"/></div><!-- Megchecked -->
+                        <div class="messageContainer recieved first"  name="2" data-id="2">
+                            <div class="material-icons megMore"  name="2" data-id="2">expand_more</div><!-- material-icons megMore -->
+                            <div class="hide" name="2" data-id="2">
+                                <p class="replyThisMessage">Reply</p>
+                                <p class="thisMessageInfo">Info</p>
+                                <p class="fowardThisMessage">Foward</p>
+                                <p class="starThisMessage">Star</p>
+                                <p class="deleteThisMessage">Delete</p>
+                                <p class="selectThisMessage">Select</p>
+                            </div><!-- megMoreOptions -->
+                            <div class="replyedMeg"  name="2" data-id="2">
+                                <div></div><!-- transparent background -->
+                                <span class="you">
+                                </span>
+                                <a href="#1">
+                                    <span class="you">You</span>
+                                    Hello. How are you today?
+                                    gewagerw wgw WGWQg ewge qwgeq wgeqw egqweg wgwg
+                                    grgwwrg wgwqew gwq geweg wqegw egwegw gewqe gwqe h gw qwgeq
+                                    wqgew
+                                </a>
+                            </div><!-- replyedMeg -->
+                            <p class="message">
+                                Hello. How are you today?
+                                gewagerw wgw WGWQg ewge qwgeq wgeqw egqweg wgwg
+                                grgwwrg wgwqegewagerw wgw WGWQg ewge qwgeq wgeqw egqweg wgwg
+                                    grgwwrg wgwqew gwq geweg wqegw egwegw gewqgewagerw wgw WGWQg ewge qwgeq wgeqw egqweg wgwg
+                                    grgwwrg wgwqew gwq geweg wqegw egwegw gewqgewagerw wgw WGWQg ewge qwgeq wgeqw egqweg wgwg
+                                    grgwwrg wgwqew gwq geweg wqegw egwegw gewqgewagerw wgw WGWQg ewge qwgeq wgeqw egqweg wgwg
+                                    grgwwrg wgwqew gwq geweg wqegw egwegw gewqgewagerw wgw WGWQg ewge qwgeq wgeqw egqweg wgwg
+                                    grgwwrg wgwqew gwq geweg wqegw egwegw gewqgewagerw wgw WGWQg ewge qwgeq wgeqw egqweg wgwg
+                                    grgwwrg wgwqew gwq geweg wqegw egwegw gewqgewagerw wgw WGWQg ewge qwgeq wgeqw egqweg wgwg
+                                    grgwwrg wgwqew gwq geweg wqegw egwegw gewqgewagerw wgw WGWQg ewge qwgeq wgeqw egqweg wgwg
+                                    grgwwrg wgwqew gwq geweg wqegw egwegw gewqgewagerw wgw WGWQg ewge qwgeq wgeqw egqweg wgwg
+                                    grgwwrg wgwqew gwq geweg wqegw egwegw gewqgewagerw wgw WGWQg ewge qwgeq wgeqw egqweg wgwg
+                                    grgwwrg wgwqew gwq geweg wqegw egwegw gewqw gwq geweg wqegw egwegw gewqe gwqe h gw qwgeq
+                                wqgew 
+                            </p>
+                            <span class="timeContainPlaceholder timeContain"><span class="material-icons stared">grade</span><span class="time">11:00</span><span class="material-icons seen">done</span></span>
+                            <span class="timeContain"><span class="material-icons stared">grade</span><span class="time">11:01</span><span class="material-icons seen">done</span></span>
+                        </div>
+                    </div>
+
+                    <div class="msgWrapper recieved first">
+                        <div class="delMsgContainer recieved first">
+                            deleted
+                        </div>
+                    </div>
+                    
+                    <div class="msgWrapper recieved" id="2a" data-id="2a">
+                        <div class="selected hover"  name="2a" data-id="2a"></div><!-- selected s -->
+                        <div class="Megchecked"  name="2a" data-id="2a"><input type="checkbox"/></div><!-- Megchecked -->
+                        <div class="messageContainer recieved"  name="2a" data-id="2a">
+                            <div class="material-icons megMore"  name="2a" data-id="2a">expand_more</div><!-- material-icons megMore -->
+                            <div class="hide" name="2a" data-id="2a">
+                                <p class="replyThisMessage">Reply</p>
+                                <p class="thisMessageInfo">Info</p>
+                                <p class="fowardThisMessage">Foward</p>
+                                <p class="starThisMessage">Star</p>
+                                <p class="deleteThisMessage">Delete</p>
+                                <p class="selectThisMessage">Select</p>
+                            </div><!-- megMoreOptions -->
+                            <div class="replyedMeg"  name="2a" data-id="2a">
+                                <div></div><!-- transparent background -->
+                                <span class="you">
+                                </span>
+                                <a href="#1">
+                                    <span class="you">You</span>
+                                    Hello. How are you today?
+                                    gewagerw wgw WGWQg ewge qwgeq wgeqw egqweg wgwg
+                                    grgwwrg wgwqew gwq geweg wqegw egwegw gewqe gwqe h gw qwgeq
+                                    wqgew
+                                </a>
+                            </div><!-- replyedMeg -->
+                            <p class="message">
+                                Hello. How are you today?
+                                gewagerw wgw WGWQg ewge qwgeq wgeqw egqweg wgwg
+                                grgwwrg wgwqew gwq gewagerw wgw WGWQg ewge qwgeq wgeqw egqweg wgwg
+                                    grgwwrg wgwqew gwq geweg wqegw egwegw gewqgewagerw wgw WGWQg ewge qwgeq wgeqw egqweg wgwg
+                                    grgwwrg wgwqew gwq geweg wqegw egwegw gewqgewagerw wgw WGWQg ewge qwgeq wgeqw egqweg wgwg
+                                    grgwwrg wgwqew gwq geweg wqegw egwegw gewqgewagerw wgw WGWQg ewge qwgeq wgeqw egqweg wgwg
+                                    grgwwrg wgwqew gwq geweg wqegw egwegw gewqgewagerw wgw WGWQg ewge qwgeq wgeqw egqweg wgwg
+                                    grgwwrg wgwqew gwq geweg wqegw egwegw gewqgewagerw wgw WGWQg ewge qwgeq wgeqw egqweg wgwg
+                                    grgwwrg wgwqew gwq geweg wqegw egwegw gewqgewagerw wgw WGWQg ewge qwgeq wgeqw egqweg wgwg
+                                    grgwwrg wgwqew gwq geweg wqegw egwegw gewqgewagerw wgw WGWQg ewge qwgeq wgeqw egqweg wgwg
+                                    grgwwrg wgwqew gwq geweg wqegw egwegw gewqgewagerw wgw WGWQg ewge qwgeq wgeqw egqweg wgwg
+                                    grgwwrg wgwqew gwq geweg wqegw egwegw gewqgewagerw wgw WGWQg ewge qwgeq wgeqw egqweg wgwg
+                                    grgwwrg wgwqew gwq geweg wqegw egwegw gewqgewagerw wgw WGWQg ewge qwgeq wgeqw egqweg wgwg
+                                    grgwwrg wgwqew gwq geweg wqegw egwegw gewqgeweg wqegw egwegw gewqe gwqe h gw qwgeq
+                                wqgew 
+                            </p>
+                            <span class="timeContainPlaceholder timeContain"><span class="material-icons stared">grade</span><span class="time">11:00</span><span class="material-icons seen">done</span></span>
+                            <span class="timeContain"><span class="material-icons stared">grade</span><span class="time">11:01</span><span class="material-icons seen">done</span></span>
+                        </div>
+                    </div>
+
+                    <div class="msgDate">11:34</div>
+
+                    <div class="msgWrapper sent first" id="3" data-id="3">
+                        <div class="selected hover"  name="3" data-id="3"></div><!-- selected s -->
+                        <div class="Megchecked"  name="3" data-id="3"><input type="checkbox"/></div><!-- Megchecked -->
+                        <div class="messageContainer sent first"  name="3" data-id="3">
+                            <div class="material-icons megMore"  name="3" data-id="3">expand_more</div><!-- material-icons megMore -->
+                            <div class="hide" name="3" data-id="3">
+                                <p class="replyThisMessage">Reply</p>
+                                <p class="thisMessageInfo">Info</p>
+                                <p class="fowardThisMessage">Foward</p>
+                                <p class="starThisMessage">Star</p>
+                                <p class="deleteThisMessage">Delete</p>
+                                <p class="selectThisMessage">Select</p>
+                            </div><!-- megMoreOptions -->
+                            <div class="replyedMeg"  name="3" data-id="3">
+                                <div></div><!-- transparent background -->
+                                <span class="you">
+                                </span>
+                                <a href="#1">
+                                    <span class="you">You</span>
+                                    Hello. How are you today?
+                                    gewagerw wgw WGWQg ewge qwgeq wgeqw egqweg wgwg
+                                    grgwwrg wgwqew gwq geweg wqegw egwegw gewqe gwqe h gw qwgeq
+                                    wqgew
+                                </a>
+                            </div><!-- replyedMeg -->
+                            <p class="message">
+                                Hello. How are you today?
+                                gewagerw wgw WGWQg ewge qwgeq wgeqw egqweg wgwg
+                                grgwwrg wgwqew gwq geweg wqegw egwegw gewqe gwqegw qwgeq
+                                wqgew olsjls sfml gjfu gwq geweg wqegw egwegw gewqe gwqegw qw yyv geq fgjjjjj fg
+                            </p>
+                            <span class="timeContainPlaceholder timeContain"><span class="material-icons stared">grade</span><span class="time">11:00</span><span class="material-icons seen">done</span></span>
+                            <span class="timeContain"><span class="material-icons stared">grade</span><span class="time">11:00</span><span class="material-icons seen">done</span></span>
+                        </div>
+                    </div>
+
+                    <div class="msgDate">11:35</div>
+                    
+                    <div class="msgWrapper recieved first" id="4" data-id="4">
+                        <div class="selected hover"  name="4" data-id="4"></div><!-- selected s -->
+                        <div class="Megchecked"  name="4" data-id="4"><input type="checkbox"/></div><!-- Megchecked -->
+                        <div class="messageContainer recieved first"  name="4" data-id="4">
+                            <div class="material-icons megMore"  name="4" data-id="4">expand_more</div><!-- material-icons megMore -->
+                            <div class="hide" name="4" data-id="4">
+                                <p class="replyThisMessage">Reply</p>
+                                <p class="thisMessageInfo">Info</p>
+                                <p class="fowardThisMessage">Foward</p>
+                                <p class="starThisMessage">Star</p>
+                                <p class="deleteThisMessage">Delete</p>
+                                <p class="selectThisMessage">Select</p>
+                            </div><!-- megMoreOptions -->
+                            <p class="message">
+                                Hello. How are you todayg?
+                                gewagerw wgw WGWQg ewge qwgeq wgeqw egqweg wgwg
+                                grgwwrg wgwqew gwq geweg wqegw egwegw gewqe gwqe h gw qwgeq
+                                wqgew 
+                            </p>
+                            <span class="timeContainPlaceholder timeContain"><span class="material-icons stared hide">grade</span><span class="time">11:00</span><span class="material-icons seen">done</span></span>
+                            <span class="timeContain"><span class="material-icons stared hide">grade</span><span class="time">11:01</span><span class="material-icons seen">done</span></span>
+                        </div>
+                    </div>
+                </div>
+                <div id="chatBox">
+                    <div id="closeChatBox" class="material-icons flexCenter">close</div>
+                    <div class="cchatBox">
+                        <div class="textMegContain">
+                            <div class="replyedMeg hide">
+                                <div></div><!-- transparent background -->
+                                <span class="material-icons flexCenter close">close</span>
+                                <span class="sentBy">
+                                </span>
+                                <a href="">
+                                    <span class="sentBy">You</span>
+                                    <span>text</span>
+                                </a>
+                            </div><!-- replyedMeg -->
+                            <div class="textContain">
+                                <div class="text placeholder">Type text message</div>
+                                <div id="chatBoxTextMsg" class="text" contentEditable="true"></div>
+                                <input type="hidden" id="msgToSend" name="msgToSend"/><!-- for non realtime communication-->
+                                <input type="hidden" id="msgToBeReplyedID" name="msgToBeReplyedID"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="material-icons flexCenter send">send</div>
+                </div>
+            </div>
+        </section>
+    </body>
+    <script>
+        //set identification session from backend for security check
+    </script>
+    <!-- <script src="src/main.js"></script> -->
+    <script type="module" src="js/messages.js"></script>
+
+</html>

@@ -1,0 +1,1217 @@
+/* for material icon or google icon */
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/_material-design-icons-master/iconfont/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(/_material-design-icons-master/iconfont/MaterialIcons-Regular.woff2) format('woff2'),
+    url(/_material-design-icons-master/iconfont/MaterialIcons-Regular.woff) format('woff'),
+    url(/_material-design-icons-master/iconfont/MaterialIcons-Regular.ttf) format('truetype');
+}
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px; /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+/* marterial icon code endes here */
+
+
+/*  the default website starts here     *//*---------------------------------------------------------------------------------------------------------------------------*/
+/* to terget everywhere */
+html{
+    font-size:14px;
+    font-family:verdana;
+    text-align:justify;
+}
+
+body{
+    background-color:whitesmoke;
+}
+
+*{
+    margin:0 auto;
+    line-height:1.5em;
+    box-sizing: border-box;
+} 
+
+/* width */
+::-webkit-scrollbar {
+    width:7px;
+    border-radius:1px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background-color:#f1f1f1;
+    border-radius:1px;
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color:#888;
+    border-radius:1px;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color:#555;
+}
+
+
+
+
+
+:disabled{
+    opacity:0.3;
+    border:1px solid black;
+}
+
+table, table th, table td, table tr{
+    border:1px solid black;
+    border-collapse: collapse;
+}
+
+
+h1{
+    font-size:200%;
+    line-height: 1.3em;
+}
+
+h2{
+    font-size:150%;
+    line-height: 1.3em;
+}
+
+h3{
+    font-size:130%;
+    line-height: 1.3em;
+}
+
+h4{
+    font-size:100%;
+}
+
+h5{
+    font-size:80%;
+}
+
+h6{
+    font-size:70%;
+}
+
+a{
+    color:black;
+}
+
+
+a:hover{
+    color:blue;
+}
+
+
+
+
+
+
+#mousePositionBody, 
+#showProfilePicture,
+#deleteMessageOption
+{
+    position:absolute;
+    background-color:none;
+    opacity:0;
+    width:100%;
+    height:100%;
+    z-index:5;
+    top:0;
+    left:0;
+}
+#mousePositionBody{
+    z-index:2;
+}
+#showProfilePicture{
+    /* background-color:red; */
+    /* display:flex; */
+    justify-content:center;
+    align-items:center;
+    opacity:1;
+}
+#showProfilePicture img{
+    max-width:90%;
+    max-height:90%;
+}
+#showProfilePicture .close{
+    background-color:red;
+    position:absolute;
+    cursor:pointer;
+    top:0;
+    right:0;
+}
+#deleteMessageOption{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:0;
+    opacity:1;
+    z-index:6;
+    /* color:black; */
+}
+#deleteMessageOption.hide{
+    display:none;
+}
+#deleteMessageOption .hide{
+    display:none;
+}
+#deleteMessageOption > span{
+    background-color:white;
+    border-radius:5px;
+    padding:5px;
+    min-width:25%;
+    box-shadow:3px 3px 3px gray, -4px -4px 4px gray;
+}
+#deleteMessageOption > span >div{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    padding:5px 10px;
+    margin:0;
+    margin-bottom:1px;
+}
+#deleteMessageOption > span >div span{
+    margin:0;
+}
+#deleteMessageOption > span >div span.action{
+    align-self:flex-end;
+    color:green;
+    cursor:pointer;
+    text-shadow: -0.5px -0.5px green, 0.5px 0.5px green;
+}
+#deleteMessageOption > span >div span.action:hover{
+    background-color:rgba(60, 175, 60, 0.4);
+}
+
+
+
+/* navigation bar */
+nav.head_nav{
+    background-color:blue;
+    display:flex;
+    align-items: center;
+    margin-bottom: 0;
+    width:100%;
+    height: 50px;
+}
+
+nav.head_nav ul{
+    display:inline-flex;
+    align-items:center;
+    height:80%;
+    width:95%;
+    padding:0;
+}
+
+
+nav.head_nav a, .notActiveBt{
+    position:relative;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    height:80%;
+    margin:0 2.5px;
+    padding:0 2%;
+
+    font-size:110%;
+    text-decoration:none;
+    color: white;
+    border-radius:5px;
+    transition: background 1s, color 0.5s, border-radius 1s;
+}
+
+nav.head_nav a:hover{
+    color:blue;
+    background-color:white;
+    border-radius: 12px;
+}
+.activeBt{
+    color:blue;
+    background-color:white;
+    opacity:0.85;
+}
+
+/* bodycontent */
+section{
+    display:flex;
+    width:100%;
+    min-height:500px;/*for safari*/
+    min-height:calc(100vh - (70px + 50px + 50px));
+    padding:0;
+    background-color:whitesmoke;
+    position:relative;
+    margin-bottom:0;
+    height:calc(100vh - 50px);
+}
+
+.hide{
+    display:none;
+}
+
+
+.flexCenter{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+
+#side{
+    /* align-self:flex-start; */
+    background-color:#FFFFFF;
+    display:flex;
+    flex-direction:column;
+    width:35%;
+    border-right:1px solid #E5DDD5;
+}
+
+#side #sideHead{
+    background-color:#EDEDED;
+    width:100%;
+    height:60px;
+    display:flex;
+    align-items:center;
+}
+
+#side #sideHead #sideHeadNormal{
+    position:relative;
+    width:100%;
+    display:flex;
+    align-items:center;
+    /* display:none; */
+}
+
+#side #sideHead #sideHeadNormal #sideSideMinimize{
+    margin:0 0.4%;
+    height:40px;
+    width:40px;
+    margin-left:0;
+    cursor:pointer;
+}
+
+#side #sideHead #sideHeadNormal #sideHeadPix, #side #sideHead #sideHeadNormal #sideHeadPix img{
+    margin:0 0.4%;
+    height:45px;
+    width:45px;
+    border-radius:50%;
+    cursor:pointer;
+}
+#side #sideHead #sideHeadNormal #sideSubContain{
+    margin:0 0.4%;
+    width:40px;
+    height:40px;
+    flex:1;
+    display:flex;
+    justify-content:flex-end;
+}
+#side #sideHead #sideHeadNormal #sideSubContain > div{
+    margin:0 2%;
+}
+#side #sideHead #sideHeadNormal #sideSubContain #sideHeadChat,
+#side #sideHead #sideHeadNormal #sideSubContain #sideHeadSearchChat
+{
+    /* margin-right:0; */
+    cursor:pointer;
+}
+#side #sideHead #sideHeadNormal #sideSubContain #sideHeadOthers{
+    margin-right:0;
+    height:40px;
+    width:40px;
+    cursor:pointer;
+    border-radius:50%;
+}
+#side #sideHead #sideHeadNormal #sideSubContain .sideHeadOthersOptions{
+    position:absolute;
+    display:flex;
+    flex-direction:column;
+    box-shadow:5px 5px 5px gray, -5px -5px 5px gray;
+    background-color:#FFFFFF;
+    min-width:40%;
+    top:95%;
+    right:0;
+    z-index:3;
+}
+#side #sideHead #sideHeadNormal #sideSubContain .sideHeadOthersOptions > p{
+    padding:3% 10%;
+    width:100%;
+    cursor:pointer;
+    display:block;
+}
+#side #sideHead #sideHeadNormal #sideSubContain .sideHeadOthersOptions > p:hover{
+    background-color:#F5F5F5;
+}
+
+
+
+
+#side #sideHead #sideHeadSelected{
+    width:100%;
+    height:40px;
+    display:flex;
+    display:none;
+}
+#side #sideHead #sideHeadSelected > div{
+    cursor:pointer;
+}
+
+
+#side #chatSearch .hide{
+    display:none;
+}
+#side #chatSearch{
+    position:relative;
+    background-color:rgb(214, 212, 212);
+    display:flex;
+    flex-direction:column;
+    margin:0;
+    padding:4% 0;
+    width:100%;
+    border:1px solid #EDEDED;
+}
+#side #chatSearch > div{
+    position:relative;
+    background-color:#FFFFFF;
+    display:flex;
+    width:90%;
+    padding:0 10px;
+    border-radius:30px;
+}
+#side #chatSearch #chatSearchBack,
+#side #chatSearch #chatSearchClear
+{
+    font-size:120%;
+    cursor:pointer;
+    color:gray;
+    margin:0;
+}
+#side #chatSearch #chatSearchBack{
+    font-size:150%;
+}
+#side #chatSearch #chatSearchBack.arrow_back{
+    color:rgb(5, 195, 253);
+}
+    #side #chatSearch > div > div{
+    /* background-color:rgb(150, 23, 23); */
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    max-width:calc(100% - 40px);
+    margin:0;
+    flex:1;
+}
+#side #chatSearch > div > div .chatSearchInput{
+    /* background-color:rgb(185, 102, 102); */
+    position:relative;
+    display:inline-block;
+    max-width:100%;
+    padding:4px;
+    margin:0;
+    /* border:1px solid black; */
+    max-height:10vh;
+    overflow:hidden;
+    outline:none;
+    cursor:text;
+}
+#side #chatSearch > div > div .chatSearchInput.placeholder{
+    position:absolute;
+    color:gray;
+}
+
+#side #sideBody{
+    width:100%;
+    flex:1;
+    overflow:auto;
+}
+#side #sideBody .chatContain{
+    position:relative;
+    display:flex;
+    align-items:center;
+    width:100%;
+    cursor:pointer;
+    padding:0 3%;
+}
+#side #sideBody .chatContain.hover:hover{
+    background-color:#F5F5F5;
+}
+#side #sideBody .chatContain.hover:hover .chatSubContain .lMegContain .lMegContain2 .chatExpandMore{
+    display:flex;
+    cursor:pointer;
+}
+
+#side #sideBody .chatContain .chatSelected{
+    position:absolute;
+    z-index:2;
+    opacity:0;
+    width:100%;
+    height:100%;
+    display:none;
+    left:0;
+}
+#side #sideBody .chatContain .chatPix, #side #sideBody .chatContain img{
+    position:relative;
+    margin:0 1%;
+    height:40px;
+    width:40px;
+    border-radius:50%;
+    cursor:pointer;
+}
+#side #sideBody .chatContain .chatPix .chatSelect{
+    position:absolute;
+    background-color:#06D755;
+    color:white;
+    font-size:70%;
+    padding:5%;
+    border-radius:50%;
+    border: 1px solid white;
+    right:0;
+    bottom:0;
+    display:none;
+}
+#side #sideBody .chatContain .chatSubContain{
+    display:flex;
+    flex-direction:column;
+    width:40px;
+    margin:0 1%;
+    flex:1;
+    margin-right:0;
+    padding:4% 0;
+    border-bottom:1px solid #EDEDED;
+}
+#side #sideBody .chatContain .chatSubContain .nameContain{
+    position:relative;
+    display:flex;
+    width:100%;
+    height:20px;
+    height:20px;
+}
+
+#side #sideBody .chatContain .chatSubContain .nameContain .nameSubContain{
+    display:flex;
+    height:20px;    
+    flex:1;
+    max-width:60%;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+    z-index: 2000;
+    background: red;
+}
+#side #sideBody .chatContain .chatSubContain .nameContain .chatTimeContain{
+    display:flex;
+    height:20px;
+    min-width:10px;
+    font-size:65%;
+    color:gray;
+}
+#side #sideBody .chatContain .chatSubContain .lMegContain{
+    display:flex;
+    width:100%;
+    height:20px;
+}
+
+#side #sideBody .chatContain .chatSubContain .lMegContain .lMegContain1{
+    display:flex;
+    flex:1;
+    height:20px;
+}
+#side #sideBody .chatContain .chatSubContain .lMegContain .lMegContain1 .lMegRead{
+    min-width:5px;
+    height:20px;
+    font-size:80%;
+}
+#side #sideBody .chatContain .chatSubContain .lMegContain .lMegContain1 .lMegRead.read,
+.messageContainer .seen.read
+{
+    color:rgb(68, 185, 231);
+}
+
+#side #sideBody .chatContain .chatSubContain .lMegContain .lMegContain1 .lMeg{
+    flex:1;
+    width:50px;
+    font-size:80%;
+    height:20px;
+    color:gray;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+
+#side #sideBody .chatContain .chatSubContain .lMegContain .lMegContain2{
+    display:flex;
+    min-width:20px;
+    height:20px;
+}
+#side #sideBody .chatContain .chatSubContain .lMegContain .lMegContain2 .chatPined{
+    min-width:20px;
+    height:20px;
+    font-size:70%;
+    padding:0 5%;
+    color:gray;
+}
+#side #sideBody .chatContain .chatSubContain .lMegContain .lMegContain2 .chatExpandMore{
+    min-width:20px;
+    height:20px;
+    padding:0 0%;
+    color:gray;
+    display:none;
+}
+#side #sideBody .chatContain .chatSubContain .lMegContain .lMegContain2 .chatMoreOptions{
+    position:absolute;
+    display:flex;
+    flex-direction:column;
+    box-shadow:5px 5px 5px gray, -5px -5px 5px gray;
+    background-color:#FFFFFF;
+    min-width:40%;
+    top:0;
+    right:3%;
+    z-index:3;
+}
+#side #sideBody .chatContain .chatSubContain .lMegContain .lMegContain2 .chatMoreOptions > p{
+    padding:3% 10%;
+    width:100%;
+    cursor:pointer;
+    display:block;
+}
+#side #sideBody .chatContain .chatSubContain .lMegContain .lMegContain2 .chatMoreOptions > p:hover{
+    background-color:#F5F5F5; 
+}
+
+#side #sideBody .chatContain .chatSubContain .lMegContain .lMegContain2 .chatCount{
+    min-width:20px;
+    height:20px;
+    color:white;
+    font-size:70%;
+    border-radius:50%;
+    background-color:#06D755;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#message{
+    background-color:#FFFFFF;
+    display:flex;
+    position:relative;
+    flex-direction: column;
+    width:65%;
+}
+#message #msgDate{
+    display:none;
+    background-color:gray;
+    position:absolute;
+    left:50%;
+    transform:translate(-50%, 0);
+    top:64px;
+    z-index:2;
+    border-radius:2px;
+}
+#message #msgDate.add{
+    display:inline;
+}
+
+#message #showChatBox{
+    position:absolute;;
+    border-radius:50%;
+    font-size:180%;
+    background-color:blue;
+    width:40px;
+    height:40px;
+    z-index:3;
+    right:20px;
+    margin:0;
+    /* top:45px; */
+    bottom:5px;
+    cursor:pointer;
+}
+
+#message #messageHead{
+    display:flex;
+    align-items: center;
+    background-color:#EDEDED;
+    width:100%;
+    height:60px;
+    padding-left:2%;
+}
+
+#message #messageHead #messageHeadNormal{
+    width:100%;
+    display:flex;
+    align-items: center;
+    /* display:none; */
+}
+#message #messageHead #messageHeadNormal > div{
+    margin:0 0.4%;
+    height:40px;
+    width:40px;
+    cursor:pointer;
+}
+
+#message #messageHead #messageHeadNormal #messageSideMaximize{
+    height:40px;
+    width:40px;
+    margin-left:0;
+    cursor:pointer;
+    display:none;
+}
+
+#message #messageHead #messageHeadNormal #messageHeadPix, #message #messageHead #messageHeadNormal #messageHeadPix img{
+    height:45px;
+    width:45px;
+    border-radius:50%;
+}
+#message #messageHead #messageHeadNormal #messageHeadNameContain{
+    position:relative;
+    flex:0.98;
+    display:flex;
+    flex-direction:column;
+    margin:0 0 0 1%;
+}
+#message #messageHead #messageHeadNormal #messageHeadNameContain > div{
+    /* flex:1; */
+    width:100%;
+}
+#message #messageHead #messageHeadNormal #messageHeadNameContain #messageHeadName{
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+    margin:0;
+    width:90%;
+}
+#message #messageHead #messageHeadNormal #messageHeadNameContain #messageHeadNameTime{
+    font-size:65%;
+}
+
+#message #messageHead #messageHeadNormal #messageHeadOthers, #message #messageHead #messageHeadSelected #messageHeadOthersS{
+    height:40px;
+    width:40px;
+    position:absolute;
+    right:0;
+    margin:0;
+    cursor:pointer;
+    border-radius:50%;
+}
+#message #messageHead #messageHeadNormal .messageHeadOthersOptions{
+    position:absolute;
+    display:flex;
+    flex-direction:column;
+    box-shadow:5px 5px 5px gray, -5px -5px 5px gray;
+    background-color:#FFFFFF;
+    min-width:40%;
+    top:9%;
+    right:0;
+    z-index:3;
+}
+#message #messageHead #messageHeadNormal .messageHeadOthersOptions > p{
+    padding:3% 10%;
+    width:100%;
+    cursor:pointer;
+    display:block;
+}
+#message #messageHead #messageHeadNormal .messageHeadOthersOptions > p:hover{
+    background-color:#F5F5F5;
+}
+
+#message #messageHead #messageHeadSelected{
+    width:100%;
+    height:40px;
+    display:flex;
+    display:none;
+}
+#message #messageHead #messageHeadSelected > div{
+    height:40px;
+    width:22px;
+    margin:0 1.5%;
+    cursor:pointer;
+}
+#message #messageHead #messageHeadSelected > .hide{
+    display:none;
+}
+
+#message #messageHead #messageHeadSelected #messageHeadCount{
+    margin-right:8%;
+    cursor:default;
+}
+#message #messageHead #messageHeadSelected #messageHeadFoward{
+    transform:rotateY(180deg);
+}
+
+#message #messageBody{
+    position:relative;
+    width:100%;
+    flex:1;
+    overflow:auto;
+    background-color:#E5DDD5;
+}
+#message #messageBody .msgDate{
+    background-color:gray;
+    display:inline;
+    position:relative;
+    left:47%;
+    margin:5% 0 10% 0;
+    transform:translate(-50%, 0);
+    border-radius:2px;
+}
+
+
+#message #chatBox{
+    background-color:#F0F0F0;
+    position:relative;
+    width:100%;
+    /* max-height:20vh; */
+    max-height:30vh;
+    align-items:center;
+    justify-content:flex-end;
+    display:none;
+    /* display:flex; */
+}
+
+#message #chatBox .send{
+    height:40px;
+    width:40px;
+    margin:0;
+    display:inline-flex;
+    background-color:green;
+    cursor:pointer;
+}
+#message #chatBox .send{
+    border-radius:50%;
+}
+#message #chatBox #closeChatBox{
+    position:absolute;
+    font-size:100%;
+    border-bottom-right-radius:50%;
+    background-color:red;
+    cursor:pointer;
+    margin:0;
+    align-self:flex-start;
+    top:0;
+    left:0;
+}
+#message #chatBox .cchatBox{
+    position:relative;
+    display:flex;
+    flex:1;
+    max-width:calc(100% - 50px);
+    flex-wrap:wrap;
+    /* background: #06D755; */
+    margin:0;
+    border-radius:30px;
+}
+
+#message #chatBox .textMegContain{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    flex-wrap:wrap;
+    align-items:center;
+    margin:0;
+    padding:5px 5px;
+    border-radius:30px;
+    border:1px solid #ccc;
+    box-shadow:1px 1px 2px #ccc;
+    /* background: red; */
+}
+#message #chatBox .textMegContain.replying{
+    border-radius:20px;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+}
+#message #chatBox .textMegContain .replyedMeg{
+    width:100%;
+    position:relative;
+    /* background: rgb(97, 62, 62); */
+    margin:0;
+}
+#message #chatBox .textMegContain .replyedMeg.hide{
+    display:none;
+}
+#message #chatBox .textMegContain .replyedMeg .close{
+    /* background:red; */
+    position:absolute;
+    cursor:pointer;
+    font-size:100%;
+    z-index:1;
+    top:0;
+    right:0;
+}
+#message #chatBox .textMegContain .replyedMeg .close:hover{
+    background:red;
+}
+#message #chatBox .textMegContain .textContain{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin:0;
+    width:100%;
+    flex:1;
+}
+#message #chatBox .textMegContain .text{
+    position:relative;
+    display:inline-block;
+    max-height:calc(18vh - 10px);
+    width:90%;
+    flex:1;
+    margin:0;
+    /* border-radius:30px; */
+    outline:none;
+    cursor:text;
+    overflow:auto;
+    padding:0 4px;
+    /* background:blue; */
+}
+#message #chatBox .textMegContain .text.placeholder{
+    position:absolute;
+    color:gray;
+    /* height:100%; */
+    /* background: yellow; */
+}
+#message #chatBox .textMegContain .text.hide{
+    display:none;
+}
+
+
+.msgWrapper{
+    display:flex;
+    position: relative;
+    background-color: none;
+    width:100%;
+    margin:0;
+    padding:0;
+}
+.msgWrapper.first{
+    margin-top:0.4%;
+}
+.msgWrapper.sent{
+    justify-content: flex-end;
+}
+.msgWrapper.recieved{
+    justify-content: flex-start;
+}
+
+.selected{
+    display:none;
+    position:absolute;
+    width:100%;
+    height:100%;
+    opacity:0.3;
+    z-index:2;
+}
+.selected.hover:hover{
+    background-color: gray;
+}
+.selected.s{
+    background-color: gray;
+}
+.Megchecked{
+    display:none;
+    flex-direction:row;
+    align-items:center;
+    position:absolute;
+    width:100%;
+    height:100%;
+    z-index:1;
+}
+.sent .Megchecked{
+    justify-content:flex-start;
+}
+.recieved .Megchecked{
+    justify-content:flex-end;
+}
+.Megchecked input{
+    margin:0;
+}
+
+
+.megMore{
+    /* background-color:rgba(128, 128, 128, 0.829); */
+    background-image:linear-gradient(to top right, rgba(255, 255, 255, 0.795), rgba(128, 128, 128, 0.808));
+    border-bottom-left-radius:50%;
+    padding-left:5px;
+    position:absolute;
+    right:0;
+    margin-right:0.8%;
+    font-size:150%;
+    z-index:2;
+    cursor:pointer;
+    display:none;
+}
+.megMoreOptions{
+    position:absolute;
+    display:flex;
+    flex-direction:column;
+    box-shadow:5px 5px 5px gray, -5px -5px 5px gray;
+    background-color:#FFFFFF;
+    min-width:40%;
+    top:0;
+    right:0;
+    z-index:3;
+}
+.megMoreOptions > p{
+    padding:3% 10%;
+    width:100%;
+    cursor:pointer;
+    display:block;
+}
+.megMoreOptions > p:hover{
+    background-color:#F5F5F5;
+}
+.recieved .megMoreOptions .thisMessageInfo{
+    display:none;
+}
+
+.replyedMeg{
+    position:relative;
+    display:flex;
+    border-radius:5px;
+    max-height:10vh;
+    /* background-color:gray; */
+    margin-bottom:2%;
+
+}
+.replyedMeg > div{
+    background-color:black;
+    position:absolute;
+    height:100%;
+    width:100%;
+    border-radius:5px;
+    opacity:0.2;
+}
+
+.replyedMeg a{
+    position:relative;
+    color:rgb(29, 28, 28);
+    flex:1;
+    font-size:80%;
+    max-height:10vh;
+    padding:2%;
+    text-decoration:none;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    border-top-right-radius:5px;
+    border-bottom-right-radius:5px;
+}
+.replyedMeg a:hover{
+    color:#859677;
+}
+
+.replyedMeg > .you{
+    background-color:green;
+    max-height:10vh;
+    border-top-left-radius:5px;
+    border-bottom-left-radius:5px;
+    width:2%;
+}
+.replyedMeg a span.you{
+    color:green;
+}
+.replyedMeg > .notYou{
+    background-color:purple;
+    max-height:10vh;
+    border-top-left-radius:5px;
+    border-bottom-left-radius:5px;
+    width:2%;
+}
+.replyedMeg a span.notYou{
+    color:purple;
+}
+
+.replyedMeg a span{
+    display:block;
+}
+
+
+.messageContainer, .delMsgContainer{
+    position: relative;
+    border-radius: 5px;
+    padding: 1%;
+    margin: 0.4% 0;
+    max-width:90%;
+}
+.messageContainer:hover .megMore,
+.delMsgContainer:hover .megMore
+{
+    display:flex;
+}
+.messageContainer.sent.first::after,
+.delMsgContainer.sent.first::after
+{
+    position:absolute;
+    content:"";
+    height:0;
+    width:0;
+    border-top:10px solid rgb(221, 221, 221);
+    border-left:10px solid transparent;
+    border-right:10px solid transparent;
+    border-bottom:10px solid transparent;
+    right:-10px;
+    top:0;
+}
+.messageContainer.recieved.first::before,
+.delMsgContainer.recieved.first::before
+{
+    position:absolute;
+    content:"";
+    height:0;
+    width:0;
+    border-top:10px solid white;;
+    border-left:10px solid transparent;
+    border-right:10px solid transparent;
+    border-bottom:10px solid transparent;
+    left:-10px;
+    top:0;
+}
+.messageContainer.sent,
+.delMsgContainer.sent
+{
+    background-color: rgb(221, 221, 221);
+    margin-right:10px;
+    box-shadow:2px 2px 1px rgb(192, 188, 188), -2px -1px 1px rgb(192, 188, 188);
+}
+
+.messageContainer.recieved,
+.delMsgContainer.recieved
+{
+    background-color:white;
+    margin-left:10px;
+    box-shadow:3px 2px 1px rgb(192, 188, 188), -2px -1px 1px rgb(192, 188, 188);
+}
+
+.delMsgContainer{
+    display:inline-flex;
+}
+
+.messageContainer .timeContain{
+    display:flex;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #aaa;
+    font-size:70%;
+    margin-bottom:1%;
+    margin-right:1%;
+    bottom:0;
+}
+.messageContainer.recieved .seen{
+    display:none;
+}
+
+.messageContainer .timeContainPlaceholder{
+    position: relative;
+    opacity:0;
+    float:right;
+    transform: translate(0, 30%);
+}
+.timeContainPlaceholder::after{
+    content:"";
+    clear:right;
+    display:none;
+}
+
+.messageContainer .stared{
+    display:flex;
+    align-items:flex-end;
+    padding-bottom:3%;
+    font-size:100%;
+    position:relative;
+}
+.messageContainer .stared.hide{
+    display:none;
+}
+
+.messageContainer .time{
+}
+.messageContainer .seen{
+    display:flex;
+    align-items:flex-end;
+    padding-bottom:3%;
+    font-size:100%;
+    position:relative;
+}
+
+.messageContainer .message{
+    display: inline;
+}
+
+
+
+
+
+
+
+/*  the default website ends here     *//*---------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*---------------------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+/* for screen more narror than screen of 500px */
+@media only screen and (max-width:500px){
+    #side{
+        position:absolute;
+        width:70%;
+        z-index:2;
+        height:calc(100vh - 50px);
+        display:none;
+    }
+    #side:after{
+        content:"";
+        background-color:rgba(255, 255, 255, 0.466);
+        position:absolute;
+        width:30vw;
+        height:calc(100vh - 50px);
+        z-index:2;
+        left:100%;
+    }
+
+    #message{
+        width:100%;
+    }
+    #message #messageHead #messageHeadNormal #messageSideMaximize{
+        display:flex;
+    }
+    
+    
+        
+}/* for screen more narror than screen of 500px */
+
+
+
