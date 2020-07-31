@@ -6,6 +6,9 @@
         <title>Quiz app</title>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
         <link rel="stylesheet" type="text/css" media='screen' href="src/messages.css" />
+
+        <!-- to use google icon from web -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
     </head>
     <body>
 
@@ -58,7 +61,7 @@
                         <div id="sideHeadOthersS" class="material-icons flexCenter">more_vert</div>
                     </div>
                 </div>
-                <div id="chatSearch">
+                <div id="chatSearch" class="typingFocus">
                     <div>
                         <span id="chatSearchBack" class="material-icons flexCenter arrow_back">search</span>
                         <div>
@@ -67,6 +70,7 @@
                         </div>
                         <span id="chatSearchClear" class="material-icons flexCenter hide">close</span>
                     </div>
+                    <span class="material-icons flexCenter chatSearchClose">close</span>
                 </div>
                 <div id="sideBody">
                     <div class="chatContain hover" id="sd-1" data-id="sd-1">
