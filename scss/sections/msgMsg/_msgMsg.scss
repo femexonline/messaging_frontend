@@ -1,0 +1,128 @@
+#message{
+    background-color:#FFFFFF;
+    display:flex;
+    position:relative;
+    flex-direction: column;
+    width:65%;
+}
+#message #msgDate{
+    display:none;
+    background-color:gray;
+    position:absolute;
+    left:50%;
+    transform:translate(-50%, 0);
+    top:64px;
+    z-index:2;
+    border-radius:2px;
+}
+#message #msgDate.add{
+    display:inline;
+}
+
+#message #showChatBox{
+    position:absolute;;
+    border-radius:50%;
+    font-size:180%;
+    background-color:blue;
+    width:40px;
+    height:40px;
+    z-index:3;
+    right:20px;
+    margin:0;
+    /* top:45px; */
+    bottom:5px;
+    cursor:pointer;
+}
+
+#message #messageHead{
+    display:flex;
+    align-items: center;
+    background-color:#EDEDED;
+    width:100%;
+    height:60px;
+    padding-left:2%;
+}
+
+
+@import "./headNormal";
+
+
+@import "./headSelected";
+
+
+
+
+
+
+
+#message .selectAChatW{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    height:100%;
+    font-size:20px;
+    color:gray;
+}
+
+#message .selectAChatBtn{
+    display:none;
+    border:1px solid grey;
+    padding:2%;
+    cursor:pointer;
+    border-radius:50%;
+    border-top-left-radius:0;
+    transition:all ease .5s;
+
+    &:hover{
+        background:rgb(107, 106, 106);
+        color:white;
+        border-radius:50%;
+        border-bottom-left-radius:0;
+    }
+}
+
+#message #messageBody{
+    position:relative;
+    width:100%;
+    flex:1;
+    overflow:auto;
+    background-color:#E5DDD5;
+}
+#message #messageBody .msgDate{
+    background-color:gray;
+    display:inline;
+    position:relative;
+    left:47%;
+    margin:5% 0 10% 0;
+    transform:translate(-50%, 0);
+    border-radius:2px;
+}
+
+
+@import "./chatbox";
+
+
+
+
+
+#message #messageBody #loadOlderMsgsBtn{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    height:5vh;
+    border:1px solid gray;
+    color:gray;
+    cursor:pointer;
+}
+
+
+@import "./contain";
+
+@import "./forward";
+
+

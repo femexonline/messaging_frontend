@@ -1,0 +1,77 @@
+#message #messageHead #messageHeadNormal{
+    width:100%;
+    display:flex;
+    align-items: center;
+    /* display:none; */
+}
+#message #messageHead #messageHeadNormal > div{
+    margin:0 0.4%;
+    height:40px;
+    width:40px;
+    cursor:pointer;
+}
+
+#message #messageHead #messageHeadNormal #messageChatMaximize{
+    height:40px;
+    width:40px;
+    margin-left:0;
+    cursor:pointer;
+    display:none;
+}
+
+#message #messageHead #messageHeadNormal #messageHeadPix, #message #messageHead #messageHeadNormal #messageHeadPix img{
+    height:45px;
+    width:45px;
+    border-radius:50%;
+}
+#message #messageHead #messageHeadNormal #messageHeadNameContain{
+    position:relative;
+    width:calc(100% - 90px);
+    display:flex;
+    flex-direction:column;
+    margin:0 0 0 1%;
+}
+#message #messageHead #messageHeadNormal #messageHeadNameContain > div{
+    /* flex:1; */
+    width:100%;
+}
+#message #messageHead #messageHeadNormal #messageHeadNameContain #messageHeadName{
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+    margin:0;
+    width:90%;
+}
+#message #messageHead #messageHeadNormal #messageHeadNameContain #messageHeadNameTime{
+    font-size:65%;
+}
+
+#message #messageHead #messageHeadNormal #messageHeadOthers, #message #messageHead #messageHeadSelected #messageHeadOthersS{
+    height:40px;
+    width:40px;
+    position:absolute;
+    right:0;
+    margin:0;
+    cursor:pointer;
+    border-radius:50%;
+}
+#message #messageHead #messageHeadNormal .messageHeadOthersOptions{
+    position:absolute;
+    display:flex;
+    flex-direction:column;
+    box-shadow:5px 5px 5px gray, -5px -5px 5px gray;
+    background-color:#FFFFFF;
+    min-width:40%;
+    top:9%;
+    right:0;
+    z-index:3;
+}
+#message #messageHead #messageHeadNormal .messageHeadOthersOptions > p{
+    padding:3% 10%;
+    width:100%;
+    cursor:pointer;
+    display:block;
+}
+#message #messageHead #messageHeadNormal .messageHeadOthersOptions > p:hover{
+    background-color:#F5F5F5;
+}

@@ -1,0 +1,213 @@
+.chat .chatBody .chatContainNotActive{
+    opacity:0.75;
+    animation: inActive 1s linear infinite;
+}
+.chat .chatBody .chatContain,
+.chat .chatBody .chatContainNotActive
+{
+    position:relative;
+    display:flex;
+    align-items:center;
+    width:100%;
+    cursor:pointer;
+    padding:0 3%;
+}
+.chat .chatBody .chatContain.hover:hover{
+    background-color:#F5F5F5;
+}
+.chat .chatBody .chatContain.hover:hover .chatSubContain .lMegContain .lMegContain2 .chatExpandMore{
+    display:flex;
+    cursor:pointer;
+}
+
+.chat .chatBody .chatContain .chatSelected{
+    position:absolute;
+    z-index:2;
+    opacity:0;
+    width:100%;
+    height:100%;
+    display:none;
+    left:0;
+}
+.chat .chatBody .chatContain .chatPix, .chat .chatBody .chatContain img,
+.chat .chatBody .chatContainNotActive .chatPix, .chat .chatBody .chatContainNotActive img
+{
+    position:relative;
+    margin:0 1%;
+    height:40px;
+    width:40px;
+    border-radius:50%;
+    cursor:pointer;
+}
+.chat .chatBody .chatContain .chatPix .chatSelect{
+    position:absolute;
+    background-color:#06D755;
+    color:white;
+    font-size:70%;
+    padding:5%;
+    border-radius:50%;
+    border: 1px solid white;
+    left:0;
+    top:0;
+    display:none;
+}
+.chat .chatBody .chatContain .chatPix .online,
+.chat .chatBody .chatContainNotActive .chatPix .online
+{
+    position:absolute;
+    background-color:#06D755;
+    color:white;
+    padding:12%;
+    border-radius:50%;
+    border: 1px solid white;
+    right:0;
+    bottom:0;
+    display:none;
+}
+.chat .chatBody .chatContain .chatSubContain,
+.chat .chatBody .chatContainNotActive .chatSubContain
+{
+    display:flex;
+    flex-direction:column;
+    width:40px;
+    margin:0 1%;
+    flex:1;
+    margin-right:0;
+    padding:4% 0;
+    border-bottom:1px solid #EDEDED;
+}
+.chat .chatBody .chatContain .chatSubContain .nameContain,
+.chat .chatBody .chatContainNotActive .chatSubContain .nameContain
+{
+    position:relative;
+    display:flex;
+    width:100%;
+    height:20px;
+}
+
+.chat .chatBody .chatContain .chatSubContain .nameContain .nameSubContain,
+.chat .chatBody .chatContainNotActive .chatSubContain .nameContain .nameSubContain
+{
+    height:20px;    
+    flex:1;
+    width:50px;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+}
+.chat .chatBody .chatContain .chatSubContain .nameContain .chatTimeContain,
+.chat .chatBody .chatContainNotActive .chatSubContain .nameContain .chatTimeContain
+{
+    display:flex;
+    height:20px;
+    min-width:10px;
+    font-size:65%;
+    color:gray;
+}
+.chat .chatBody .chatContain .chatSubContain .lMegContain,
+.chat .chatBody .chatContainNotActive .chatSubContain .lMegContain
+{
+    display:flex;
+    width:100%;
+    height:20px;
+}
+
+.chat .chatBody .chatContain .chatSubContain .lMegContain .lMegContain1,
+.chat .chatBody .chatContainNotActive .chatSubContain .lMegContain .lMegContain1
+{
+    display:flex;
+    flex:1;
+    height:20px;
+}
+.chat .chatBody .chatContain .chatSubContain .lMegContain .lMegContain1 .lMegRead,
+.chat .chatBody .chatContainNotActive .chatSubContain .lMegContain .lMegContain1 .lMegRead
+{
+    min-width:5px;
+    height:20px;
+    font-size:80%;
+}
+.chat .chatBody .chatContain .chatSubContain .lMegContain .lMegContain1 .lMegRead.read,
+.chat .chatBody .chatContainNotActive .chatSubContain .lMegContain .lMegContain1 .lMegRead.read,
+.messageContainer .seen.read
+{
+    color:rgb(68, 185, 231);
+}
+
+.chat .chatBody .chatContain .chatSubContain .lMegContain .lMegContain1 .lMeg,
+.chat .chatBody .chatContainNotActive .chatSubContain .lMegContain .lMegContain1 .lMeg
+{
+    flex:1;
+    width:50px;
+    font-size:80%;
+    height:20px;
+    color:gray;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+
+.chat .chatBody .chatContain .chatSubContain .lMegContain .lMegContain2,
+.chat .chatBody .chatContainNotActive .chatSubContain .lMegContain .lMegContain2
+{
+    display:flex;
+    min-width:20px;
+    height:20px;
+}
+.chat .chatBody .chatContain .chatSubContain .lMegContain .lMegContain2 .chatPined,
+.chat .chatBody .chatContainNotActive .chatSubContain .lMegContain .lMegContain2 .chatPined
+{
+    min-width:20px;
+    height:20px;
+    font-size:70%;
+    padding:0 5%;
+    color:gray;
+}
+.chat .chatBody .chatContain .chatSubContain .lMegContain .lMegContain2 .chatExpandMore,
+.chat .chatBody .chatContainNotActive .chatSubContain .lMegContain .lMegContain2 .chatExpandMore
+{
+    min-width:20px;
+    height:20px;
+    padding:0 0%;
+    color:gray;
+    display:none;
+}
+.chat .chatBody .chatContain .chatSubContain .lMegContain .lMegContain2 .chatMoreOptions{
+    position:absolute;
+    display:flex;
+    flex-direction:column;
+    box-shadow:5px 5px 5px gray, -5px -5px 5px gray;
+    background-color:#FFFFFF;
+    min-width:40%;
+    top:0;
+    right:3%;
+    z-index:3;
+}
+.chat .chatBody .chatContain .chatSubContain .lMegContain .lMegContain2 .chatMoreOptions > p{
+    margin:0;
+    padding:3% 10%;
+    width:100%;
+    cursor:pointer;
+    display:block;
+}
+.chat .chatBody .chatContain .chatSubContain .lMegContain .lMegContain2 .chatMoreOptions > p.processing{
+    opacity:0.75;
+    animation: inActive 1s linear infinite;
+}
+.chat .chatBody .chatContain .chatSubContain .lMegContain .lMegContain2 .chatMoreOptions > p:hover{
+    background-color:#F5F5F5; 
+}
+.chat .chatBody .chatContain .chatSubContain .lMegContain .lMegContain2 .chatMoreOptions > p.processing:hover{
+    background-color:none; 
+}
+
+.chat .chatBody .chatContain .chatSubContain .lMegContain .lMegContain2 .chatCount,
+.chat .chatBody .chatContainNotActive .chatSubContain .lMegContain .lMegContain2 .chatCount
+{
+    min-width:20px;
+    height:20px;
+    color:white;
+    font-size:70%;
+    border-radius:50%;
+    background-color:#06D755;
+}

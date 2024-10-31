@@ -1,0 +1,117 @@
+#message #chatBox{
+    background-color:#F0F0F0;
+    position:relative;
+    width:100%;
+    /* max-height:20vh; */
+    max-height:30vh;
+    align-items:center;
+    justify-content:flex-end;
+    display:none;
+    /* display:flex; */
+}
+
+#message #chatBox .send{
+    height:40px;
+    width:40px;
+    margin:0;
+    display:inline-flex;
+    background-color:green;
+    cursor:pointer;
+}
+#message #chatBox .send{
+    border-radius:50%;
+}
+#message #chatBox #closeChatBox{
+    position:absolute;
+    font-size:100%;
+    border-bottom-right-radius:50%;
+    background-color:red;
+    cursor:pointer;
+    margin:0;
+    align-self:flex-start;
+    top:0;
+    left:0;
+}
+#message #chatBox .cchatBox{
+    position:relative;
+    display:flex;
+    flex:1;
+    max-width:calc(100% - 50px);
+    flex-wrap:wrap;
+    /* background: #06D755; */
+    margin:0;
+    border-radius:30px;
+}
+
+#message #chatBox .textMegContain{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    flex-wrap:wrap;
+    align-items:center;
+    margin:0;
+    padding:5px 5px;
+    border-radius:30px;
+    border:1px solid #ccc;
+    box-shadow:1px 1px 2px #ccc;
+    /* background: red; */
+}
+#message #chatBox .textMegContain.replying{
+    border-radius:20px;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+}
+#message #chatBox .textMegContain .replyedMeg{
+    width:100%;
+    position:relative;
+    /* background: rgb(97, 62, 62); */
+    margin:0;
+}
+#message #chatBox .textMegContain .replyedMeg.hide{
+    display:none;
+}
+#message #chatBox .textMegContain .replyedMeg .close{
+    /* background:red; */
+    position:absolute;
+    cursor:pointer;
+    font-size:100%;
+    z-index:1;
+    top:0;
+    right:0;
+}
+#message #chatBox .textMegContain .replyedMeg .close:hover{
+    background:red;
+}
+#message #chatBox .textMegContain .textContain{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin:0;
+    width:100%;
+    flex:1;
+}
+#message #chatBox .textMegContain .text{
+    position:relative;
+    display:inline-block;
+    max-height:calc(18vh - 10px);
+    width:90%;
+    flex:1;
+    margin:0;
+    /* border-radius:30px; */
+    outline:none;
+    cursor:text;
+    overflow:auto;
+    padding:0 4px;
+    /* background:blue; */
+}
+#message #chatBox .textMegContain .text.placeholder{
+    position:absolute;
+    color:gray;
+    /* height:100%; */
+    /* background: yellow; */
+}
+#message #chatBox .textMegContain .text.hide{
+    display:none;
+}

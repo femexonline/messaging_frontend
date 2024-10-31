@@ -1,0 +1,30 @@
+write API that fetch chat in 
+    ChatFuncs.fetchChats
+
+write API that fetch chat in 
+    ChatFuncs.fetchChatByID
+
+write API that fetch chat in 
+    ChatFuncs.fetchOlderChats
+
+
+
+prfile.js, recieveLastSeenSignalTestForAllProfiles()
+    should run after page load
+
+
+
+
+socket signals to recieve
+    del msg signal
+    det chat signal
+    new msg signal
+    last seen signal
+    name change signal
+    picture change signal
+    msg seen signal
+
+
+socket signals to send
+    msg seen signal
+

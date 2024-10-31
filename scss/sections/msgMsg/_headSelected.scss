@@ -1,0 +1,23 @@
+#message #messageHead #messageHeadSelected{
+    width:100%;
+    height:40px;
+    display:flex;
+    display:none;
+}
+#message #messageHead #messageHeadSelected > div{
+    height:40px;
+    width:22px;
+    margin:0 1.5%;
+    cursor:pointer;
+}
+#message #messageHead #messageHeadSelected > .hide{
+    display:none;
+}
+
+#message #messageHead #messageHeadSelected #messageHeadCount{
+    margin-right:8%;
+    cursor:default;
+}
+#message #messageHead #messageHeadSelected #messageHeadFoward{
+    transform:rotateY(180deg);
+}

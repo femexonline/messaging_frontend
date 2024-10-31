@@ -1,0 +1,179 @@
+#mousePositionBody, 
+#showProfilePicture,
+#deleteMessageOption,
+#deleteChatOption,
+#msgInfoPopUp,
+#chatMousePosBody
+{
+    position:absolute;
+    background-color:none;
+    opacity:0;
+    width:100%;
+    height:100%;
+    z-index:5;
+    top:0;
+    left:0;
+}
+#mousePositionBody{
+    z-index:2;
+}
+#chatMousePosBody{
+    z-index:3;
+    width:100vw;
+    left:0;
+    display:none;
+}
+
+#showProfilePicture{
+    /* background-color:red; */
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    opacity:1;
+
+    &.hide{
+        display:none;
+    }
+
+    img{
+        max-width:90%;
+        max-height:90%;
+    }
+
+    .close{
+        background-color:red;
+        position:absolute;
+        cursor:pointer;
+        top:0;
+        right:0;
+    }
+}
+
+#deleteMessageOption{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:0;
+    opacity:1;
+    z-index:6;
+    /* color:black; */
+
+    &.hide{
+        display:none;
+    }
+
+    .hide{
+        display:none;
+    }
+    & > span{
+        background-color:white;
+        border-radius:5px;
+        padding:5px;
+        min-width:25%;
+        box-shadow:3px 3px 3px gray, -4px -4px 4px gray;
+    }
+    & > span >div{
+        display:flex;
+        flex-direction:column;
+        align-items:flex-start;
+        padding:5px 10px;
+        margin:0;
+        margin-bottom:1px;
+    }
+    & > span >div span{
+        margin:0;
+    }
+    & > span >div span.action{
+        align-self:flex-end;
+        color:green;
+        cursor:pointer;
+        text-shadow: -0.5px -0.5px green, 0.5px 0.5px green;
+    }
+    & > span >div span.action:hover{
+        background-color:rgba(60, 175, 60, 0.4);
+    }
+        
+}
+
+#deleteChatOption{
+    @extend #deleteMessageOption
+}
+
+#msgInfoPopUp{
+    background:rgb(243, 233, 233);
+    opacity:1;
+
+    .head{
+        display:flex;
+        margin:0;
+        padding:1% 1%;
+        height:40px;
+        align-items:center;
+        background:whitesmoke;
+
+        &.bodyScrl{
+            background:rgb(219, 216, 216);
+        }
+
+        .back{
+            display:inline;
+            margin:0;
+            cursor:pointer;
+            margin-right:1%;
+        }
+
+        .title{
+            margin:0;
+        }
+    }
+
+    .body{
+        height:calc(100vh - (50px + 40px));
+        overflow:auto;
+
+        hr{
+            border-color:rgb(161, 153, 153);
+        }
+
+        .MIPMsg{
+            background:whitesmoke;
+            display:flex;
+            flex-direction:column;
+            padding:1%;
+        }
+
+        .MIPSta{
+            background:rgb(146, 142, 142);
+            display:flex;
+            flex-direction:column;
+            width:95%;
+            margin-top:1.7%;
+            border-radius:5px;
+            padding:1.5%;
+
+            *{
+                margin:0;
+            }
+
+            .MIPRead, 
+            .MIPDeliver
+            {
+                display:flex;
+                flex-direction:column;
+
+                .title{
+
+                    .read{
+                        display:inline;
+                        font-size:100%;
+                        color:gray;
+                    }
+                }
+            }
+
+            .MIPRead .title .read{
+                color:#44b9e7;
+            }
+        }
+    }
+}
