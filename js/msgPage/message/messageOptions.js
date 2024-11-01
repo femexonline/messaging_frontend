@@ -66,7 +66,7 @@ class MsgOptions{
     
         const chatID=ChatFuncs.getActiveChat();
 
-        let messageID=event.path[1].dataset["id"];
+        let messageID=event.target.parentElement.dataset["id"];
         let currentSelectMessageOption=event.target;
         currentSelectMessageOption.removeEventListener("click", MsgOptions.selectThisMessage);
     

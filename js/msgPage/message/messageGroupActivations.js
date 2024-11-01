@@ -76,12 +76,10 @@ class MsgGroupActivations{
         // console.log(event)
         let subMsgMore;
         let selMore=event.target;
-        if(!selMore.classList.contains("megMore")){
-            subMsgMore=selMore;
-            selMore=subMsgMore.parentElement;
-        }else{
-            subMsgMore=selMore.getElementsByClassName("subMsgMore")[0];
+        while(!selMore.classList.contains("megMore")){
+            selMore=selMore.parentElement;
         }
+        subMsgMore=selMore.getElementsByClassName("subMsgMore")[0];
 
         selMore.removeEventListener("click", MsgGroupActivations.megSelectMoreOptions);
         subMsgMore.removeEventListener("click", MsgGroupActivations.megSelectMoreOptions);

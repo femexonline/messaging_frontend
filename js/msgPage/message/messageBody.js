@@ -500,14 +500,14 @@ class MsgBody{
     }
 
     static makeMsgIDUsable(msgID){
-        if(!/sd/.test(msgID)){
+        if(!/msg/.test(msgID)){
             msgID="msg-"+msgID;
         }
         return msgID;
     }
     
     static makeMsgID_DB_Usable(msgID){
-        if(/sd/.test(msgID)){
+        if(/msg/.test(msgID)){
             msgID=msgID.split("msg-").splice(-1)[0];
         }
         return msgID;

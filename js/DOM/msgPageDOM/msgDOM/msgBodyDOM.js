@@ -505,9 +505,7 @@ class MsgWraperDOM{
         let spanSub;
         if(msgOptionSettings.starMessage){
             if(stared){
-                spanSub=document.createElement("span");
-                spanSub.className="material-icons stared";
-                spanSub.innerHTML="grade";
+                spanSub=StarDOM.create();
                 span.appendChild(spanSub);
                 spanSub=spanSub.cloneNode(true);
                 span2.appendChild(spanSub);
@@ -1001,8 +999,8 @@ class MsgMoreOptionsDOM{
 
     static delete(msgID, isElem=false){
         let mesMoreOptions;
-        msgID=MsgBody.makeMsgIDUsable(msgID);
         if(!isElem){
+            msgID=MsgBody.makeMsgIDUsable(msgID);
             const msgWrapper=document.getElementById(msgID);
             if(msgWrapper){
                 mesMoreOptions=msgWrapper.getElementsByClassName("megMoreOptionsBackground")[0];

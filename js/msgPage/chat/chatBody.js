@@ -301,14 +301,14 @@ class ChatBody{
     }
     
     static makeChatIDUsable(chatID){
-        if(!/sd/.test(chatID)){
+        if(!/chat/.test(chatID)){
             chatID="chat-"+chatID;
         }
         return chatID;
     }
     
     static makeChatID_DB_Usable(chatID){
-        if(/sd/.test(chatID)){
+        if(/chat/.test(chatID)){
             chatID=chatID.split("chat-").splice(-1)[0];
         }
         return chatID;

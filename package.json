@@ -1,32 +1,27 @@
 {
   "name": "messaging-frontend",
   "version": "1.0.0",
-  "description": "",
   "main": "./js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build_JS": "webpack ./js/messages.js --output ./src/messages.js --mode development",
-    "build_JS_2": "webpack ./js/messages.js --output ./src/messages.js --mode development --config webpack.config.js",
-    "build_CSS": "gulp styles",
-    "build_JS_CSS":"npm run build_JS & npm run build_CSS"
+    "scssScriptWatch": "sass --watch scss/code:scss/output",
+    "scssScript": "sass scss/code:scss/output",
+    "prifixCssWatch": "postcss scss/output/*.css --use autoprefixer -d src/ -w",
+    "prifixCss": "postcss scss/output/*.css --use autoprefixer -d src/",
+    "prifixScss": "npm run scssScript && npm run prifixCss",
+    "start": "onchange \"scss/code/**/*.scss\" \"scss/code/*.scss\" -- npm run prifixScss",
+    "processCSS": "onchange \"scss/code/**/*.scss\" \"scss/code/*.scss\" -- npm run prifixScss",
+    "processJS": "onchange \"js/**/*.js\" \"js/*.js\" -- webpack"
   },
   "author": "",
   "license": "ISC",
+  "description": "",
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^8.1.0",
-    "babel-preset-env": "^1.7.0",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-sass": "^4.1.0",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.12"
-  },
-  "dependencies": {},
-  "browserslist": [
-    "defaults",
-    "not IE 11",
-    "not IE_Mob 11",
-    "maintained node versions"
-  ]
+    "autoprefixer": "^10.4.20",
+    "onchange": "^7.1.0",
+    "postcss": "^8.4.47",
+    "postcss-cli": "^11.0.0",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4"
+  }
 }

@@ -66,11 +66,11 @@ class ChatOptions{
     static selectThisChat(event){
         const chatHeadCount=DOMGetter.getChatHeadCount();
     
-        let chatID=event.path[1].dataset["id"];
+        let chatID=event.target.parentElement.dataset["id"];
         let currentSelectChatOption=event.target;
         let chatContain=document.getElementById(chatID);
         let chatSelect=chatContain.getElementsByClassName("chatSelect")[0];
-        let chatExpandMore=event.path[1].previousElementSibling;
+        let chatExpandMore=event.target.parentElement.previousElementSibling;
     
         if(chatSelect){ChatSelectedIconDOM.delete(chatID);}
     
@@ -119,7 +119,7 @@ class ChatOptions{
     
         ChatGroupDeactivations.chatExpandMoreOptions();
         
-        let chatID=event.path[1].dataset["id"];
+        let chatID=event.target.parentElement.dataset["id"];
     
         ChatBody.emptySelectedChatsID();
     
@@ -156,7 +156,7 @@ class ChatOptions{
         
         ChatGroupDeactivations.chatExpandMoreOptions();    
 
-        let chatID=event.path[1].dataset["id"];
+        let chatID=event.target.parentElement.dataset["id"];
         let apiChatIDs=[chatID];
         
         ChatApis.pinChat(apiChatIDs);

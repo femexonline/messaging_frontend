@@ -50,16 +50,13 @@ class UpdateMsgDOM{
         const messageContainer=msgWrapper.getElementsByClassName("messageContainer")[0];
         const staredElem=messageContainer.getElementsByClassName("stared")[0];
         const staredStatus=MessagesDB.getStaredStatus(chatID, msgID);
-        const starThisMessage=msgWrapper.getElementsByClassName("starThisMessage")[0];
         if(staredStatus){
             if(!staredElem){
                 StarDOM.append(msgID, StarDOM.create());
-                starThisMessage.innerHTML="Unstar";
             }
         }else{
             if(staredElem){
                 StarDOM.delete(msgID);
-                starThisMessage.innerHTML="Star";
             }
         }
     }
